@@ -18,23 +18,23 @@ notAcceptableUserNameMessageComplete = notAcceptableUserNameMessageComplete + " 
 
 function checkUserName(paramUserName, minLen, maxLen, userNameErrorMessage, userNameOkUrl) {
     if (minLen>=maxLen) {
- 		alert("minLen("+minLen+") трябва да е по-малко или равно на maxLen("+maxLen+")!");
+        alert("minLen("+minLen+") трябва да е по-малко или равно на maxLen("+maxLen+")!");
         return 0;
     }
 
-	if (debugMode) {
- 		alert("userNameString.lenght=" +paramUserName.length); // show popup with a random number
+    if (debugMode) {
+        alert("userNameString.lenght=" +paramUserName.length); // show popup with a random number
     }
     
     if(paramUserName.length < minLen || paramUserName.length >maxLen) {
         // write error message
         document.write("<b>" + userNameErrorMessage + "</b><br>");
     } else {
-    	if (debugMode) {
-        	// write debug text
-        	document.write("<b>" + userNameOkUrl + "</b><br>");
-    	} else {
-        	// Redirecting the user to page userNameOkUrl
+        if (debugMode) {
+            // write debug text
+            document.write("<b>" + userNameOkUrl + "</b><br>");
+        } else {
+            // Redirecting the user to page userNameOkUrl
             windоw.lоcation.replace(userNameOkUrl);
         }
     }
